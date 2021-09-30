@@ -17,7 +17,7 @@ func healthz(w http.ResponseWriter, r *http.Request) {
 			w.Header().Add(k, v1)
 		}
 	}
-	w.Header().Add("version", os.Getenv("VERSIOIN"))
+	w.Header().Add("version", os.Getenv("VERSION"))
 
 	w.WriteHeader(200)
 	fmt.Fprintf(w, "hello world")
